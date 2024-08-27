@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: nginx-deployment
-  name: nginx-deployment
-  namespace: helm
+    app: nginx-deployment22
+  name: nginx-deployment22
+  namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-deployment
+      app: nginx-deployment22
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,7 +18,7 @@ spec:
   template:
     metadata:
       labels:
-        app: nginx-deployment
+        app: nginx-deployment22
     spec:
       containers:
       - image: gcr.io/dynamic-circle-431306-h3/custom-nginx-deployment-image:v0.0.14
