@@ -6,7 +6,7 @@ metadata:
   finalizers:
   - service.kubernetes.io/load-balancer-cleanup
   labels:
-    app: nginx-deployment22
+    app: "{{ .Values.name }}"
   name: nginx-deployment-service22
   namespace: default
 spec:
@@ -15,5 +15,5 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: nginx-deployment22
+    app: "{{ .Values.name }}"
   type: LoadBalancer
