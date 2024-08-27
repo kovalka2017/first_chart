@@ -1,4 +1,4 @@
 deployment:
   image: gcr.io/dynamic-circle-431306-h3/custom-nginx-deployment-image
   tag: "v0.0.14"
-name: nginx-deployment22
+name: nginx-deployment33
