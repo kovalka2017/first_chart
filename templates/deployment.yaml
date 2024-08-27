@@ -4,7 +4,7 @@ metadata:
   labels:
     app: nginx-deployment
   name: nginx-deployment
-  namespace: default
+  namespace: helm
 spec:
   replicas: 1
   selector:
