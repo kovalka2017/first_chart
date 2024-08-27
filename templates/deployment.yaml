@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-deployment
+  name: nginx-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-deployment
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: nginx-deployment
+    spec:
+      containers:
+      - image: gcr.io/dynamic-circle-431306-h3/custom-helm-deployment-image:v0.0.14
+        imagePullPolicy: Always
+        name: nginx-1
+      - image: busybox:latest
+        imagePullPolicy: Always
+        name: busybox
+        command:
+        - sh
+        - -c
+        - echo Hello from BusyBox12345! && sleep 3600
+
