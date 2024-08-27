@@ -6,8 +6,8 @@ metadata:
   finalizers:
   - service.kubernetes.io/load-balancer-cleanup
   labels:
-    app: nginx-deployment
-  name: nginx-deployment-service
+    app: nginx-deployment22
+  name: nginx-deployment-service22
   namespace: helm
 spec:
   ports:
@@ -16,5 +16,5 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: nginx-deployment
+    app: nginx-deployment22
   type: LoadBalancer
