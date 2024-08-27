@@ -7,7 +7,7 @@ metadata:
   - service.kubernetes.io/load-balancer-cleanup
   labels:
     app: "{{ .Values.name }}"
-  name: "{{ .Values.name }}"-service22
+  name: "{{ .Values.name-service }}"
   namespace: default
 spec:
   ports:
