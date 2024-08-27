@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: nginx-deployment22
-  name: nginx-deployment22
+    app: "{{ .Values.name }}"
+  name: "{{ .Values.name }}"
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-deployment22
+      app: "{{ .Values.name }}"
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,10 +18,10 @@ spec:
   template:
     metadata:
       labels:
-        app: nginx-deployment22
+        app: "{{ .Values.name }}"
     spec:
       containers:
-      - image: gcr.io/dynamic-circle-431306-h3/custom-nginx-deployment-image:v0.0.14
+      - image: "{{ .Values.deployment.image }}":"{{ .Values.deployment.tag }}"
         imagePullPolicy: Always
         name: nginx-1
       - image: busybox:latest
