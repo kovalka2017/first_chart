@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 123456789
+  namespace: argocd
+
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+    
+  labels:
+    name: first_chart
+
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/kovalka2017/first_chart.git
+    targetRevision: HEAD  
+    chart: first_chart # path of the kubernetes application code means where you stored deployment.yaml, service.yaml etc
+
+    
+  destination:
+    server: https://kubernetes.default.svc  # if you want to deploy application in the same cluster where argocd server is running if thats diffrent then use cluster IP address.
+    namespace: test
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
