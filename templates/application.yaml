@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: lolkek228_337
+  name: lolkek228337
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: nginx-deployment=gcr.io/dynamic-circle-431306-h3/custom-nginx-deployment-image     #Write repository name
