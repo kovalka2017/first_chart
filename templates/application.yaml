@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: lolkek228 
+  name: lolkek228_337
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: nginx-deployment=gcr.io/dynamic-circle-431306-h3/custom-nginx-deployment-image     #Write repository name
@@ -22,9 +22,9 @@ spec:
   project: default
 
   source:
-    repoURL: git@github.com:kovalka2017/nginx-deployment.git
+    repoURL: https://github.com/kovalka2017/first_chart.git
     targetRevision: HEAD  
-    path: deploy # path of the kubernetes application code means where you stored deployment.yaml, service.yaml etc
+    path: template # path of the kubernetes application code means where you stored deployment.yaml, service.yaml etc
 
     
   destination:
