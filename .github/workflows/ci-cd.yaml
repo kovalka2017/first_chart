@@ -43,7 +43,7 @@ jobs:
   
       - name: Update nginx-deployment.yaml with new version
         run: |
-          sed -i "s|tag: *|tag: "v${{ env.new_version }}"|g" values33.yaml
+          sed -i "s|tag: .*|tag: "v${{ env.new_version }}"|g" values33.yaml
 
           cat values.yaml
 
