@@ -28,7 +28,7 @@ spec:
   project: default
 
   source:
-    repoURL: us-central1-docker.pkg.dev/dynamic-circle-431306-h3/first-helm-profi
+    repoURL: https://github.com/kovalka2017/first_chart
     targetRevision: 0.1.0  
     chart: first_chart # path of the kubernetes application code means where you stored deployment.yaml, service.yaml etc
 
