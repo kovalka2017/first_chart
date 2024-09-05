@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/git-branch: master
-    argocd-image-updater.argoproj.io/image-list: first_chart=us-central1-docker.pkg.dev/dynamic-circle-431306-h3/first-helm-profi
+    argocd-image-updater.argoproj.io/image-list: first_chart=gcr.io/dynamic-circle-431306-h3/custom-nginx-helm-deployment-image
     argocd-image-updater.argoproj.io/first_chart.helm.image-name: image.name
     argocd-image-updater.argoproj.io/first_chart.helm.image-tag: image.tag
     argocd-image-updater.argoproj.io/first_chart.pull-secret: pullsecret:argocd/gcr-json-key
