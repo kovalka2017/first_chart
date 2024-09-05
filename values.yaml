@@ -1,5 +1,5 @@
 deployment:
   image: gcr.io/dynamic-circle-431306-h3/custom-nginx-helm-deployment-image
-  tag: v0.1.32
+  tag: v0.1.33
 name: nginx-deployment3333
 nameservice: nginx-deployment33-service
