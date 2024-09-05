@@ -29,10 +29,9 @@ spec:
 
   source:
     repoURL: https://github.com/kovalka2017/first_chart.git
-    targetRevision: 0.1.0  
-    chart: first_chart # path of the kubernetes application code means where you stored deployment.yaml, service.yaml etc
-    helm:
-      releaseName: first_chart
+    targetRevision: HEAD 
+    path: . # path of the kubernetes application code means where you stored deployment.yaml, service.yaml etc
+
 
     
   destination:
