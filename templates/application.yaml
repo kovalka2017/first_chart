@@ -28,7 +28,7 @@ spec:
   project: default
 
   source:
-    repoURL: git@github.com:kovalka2017/nginx-deployment
+    repoURL: us-central1-docker.pkg.dev/dynamic-circle-431306-h3/first-helm-profi
     targetRevision: 0.1.0  
     chart: first_chart # path of the kubernetes application code means where you stored deployment.yaml, service.yaml etc
 
