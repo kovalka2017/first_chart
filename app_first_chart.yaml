@@ -5,11 +5,11 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/git-branch: master
-    argocd-image-updater.argoproj.io/image-list: myalias=us-central1-docker.pkg.dev/dynamic-circle-431306-h3/first-helm-profi
-    argocd-image-updater.argoproj.io/myalias.helm.image-name: image.name
-    argocd-image-updater.argoproj.io/myalias.helm.image-tag: image.tag
-    argocd-image-updater.argoproj.io/myalias.pull-secret: pullsecret:argocd/gcr-json-key
-    argocd-image-updater.argoproj.io/myalias.update-strategy: digest
+    argocd-image-updater.argoproj.io/image-list: first_chart=us-central1-docker.pkg.dev/dynamic-circle-431306-h3/first-helm-profi
+    argocd-image-updater.argoproj.io/first_chart.helm.image-name: image.name
+    argocd-image-updater.argoproj.io/first_chart.helm.image-tag: image.tag
+    argocd-image-updater.argoproj.io/first_chart.pull-secret: pullsecret:argocd/gcr-json-key
+    argocd-image-updater.argoproj.io/first_chart.update-strategy: digest
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/gcr-json-key
 
   finalizers:
