@@ -17,7 +17,8 @@ spec:
     repoURL: https://github.com/kovalka2017/first_chart.git
     targetRevision: 0.1.0  
     chart: first_chart # path of the kubernetes application code means where you stored deployment.yaml, service.yaml etc
-
+    helm: 
+      values: values.yaml
     
   destination:
     server: https://kubernetes.default.svc  # if you want to deploy application in the same cluster where argocd server is running if thats diffrent then use cluster IP address.
