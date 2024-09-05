@@ -4,13 +4,13 @@ metadata:
   name: lolkek338
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/git-branch: master
-    argocd-image-updater.argoproj.io/image-list: first_chart=gcr.io/dynamic-circle-431306-h3/custom-nginx-helm-deployment-image
+    argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/image-list: kovalka2017/first_chart
     argocd-image-updater.argoproj.io/first_chart.helm.image-name: image.name
     argocd-image-updater.argoproj.io/first_chart.helm.image-tag: image.tag
     argocd-image-updater.argoproj.io/first_chart.pull-secret: pullsecret:argocd/gcr-json-key
     argocd-image-updater.argoproj.io/first_chart.update-strategy: digest
-    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/gcr-json-key
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds 
 
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -22,11 +22,9 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/kovalka2017/first_chart.git
-    targetRevision: 0.1.0  
+    repoURL: https://github.com/kovalka2017/first_chart
+    targetRevision: HEAD 
     chart: first_chart # path of the kubernetes application code means where you stored deployment.yaml, service.yaml etc
-    helm: 
-      values: values.yaml
     
   destination:
     server: https://kubernetes.default.svc  # if you want to deploy application in the same cluster where argocd server is running if thats diffrent then use cluster IP address.
