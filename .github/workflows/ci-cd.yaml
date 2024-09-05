@@ -51,7 +51,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Actions"
-          git add VERSION values33.yaml
+          git add VERSION values.yaml
           git commit -m "Increment version to ${{ env.new_version }}"
           git push
 
