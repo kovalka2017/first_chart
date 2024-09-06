@@ -24,7 +24,7 @@ spec:
   source:
     chart: first_chart
     repoURL: https://github.com/kovalka2017/first_chart
-    targetRevision: 1.16.0
+    targetRevision: 0.1.0
     helm:
       values: |
           image:
