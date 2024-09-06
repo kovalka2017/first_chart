@@ -22,7 +22,7 @@ spec:
   project: default
 
   source:
-    chart: first_chart
+    path: .
     repoURL: https://github.com/kovalka2017/first_chart
     targetRevision: 0.1.0
     helm:
