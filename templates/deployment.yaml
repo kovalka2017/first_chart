@@ -21,7 +21,7 @@ spec:
         app: "{{ .Values.name }}"
     spec:
       containers:
-      - image: {{ .Values.deployment.image }}:{{ .Values.deployment.tag }}
+      - image: "{{ .Values.deployment.image }}:{{ .Values.deployment.tag }}"
         imagePullPolicy: Always
         name: nginx-1
       - image: busybox:latest
